@@ -1,0 +1,55 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Vercel or Netlify deployment (if used)
+.vercel/
+.netlify/
+
+# Environment files
+.env*
+!.env.example  # Keep example config
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+logs/**/*.log
+
+# IDE settings
+.vscode/
+.idea/
+
+# MacOS and system files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+jest-coverage/
+
+# Storybook (if used)
+.storybook-out/
+storybook-static/
+
+# Lint caches
+.eslintcache
+.stylelintcache
+
+# Optional: if using TurboRepo or monorepo tools
+turbo/
+.cache/
+
+# Optional: if using Docker
+*.local
+docker-compose.override.yml
