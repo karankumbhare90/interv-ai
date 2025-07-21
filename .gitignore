@@ -1,55 +1,41 @@
-# Node.js
-node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# Next.js build output
-.next/
-out/
-dist/
-
-# Vercel or Netlify deployment (if used)
-.vercel/
-.netlify/
-
-# Environment files
+# env files (can opt-in for committing if needed)
 .env*
-!.env.example  # Keep example config
 
-# TypeScript
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
-
-# Logs
-logs
-*.log
-logs/**/*.log
-
-# IDE settings
-.vscode/
-.idea/
-
-# MacOS and system files
-.DS_Store
-Thumbs.db
-
-# Testing
-coverage/
-jest-coverage/
-
-# Storybook (if used)
-.storybook-out/
-storybook-static/
-
-# Lint caches
-.eslintcache
-.stylelintcache
-
-# Optional: if using TurboRepo or monorepo tools
-turbo/
-.cache/
-
-# Optional: if using Docker
-*.local
-docker-compose.override.yml
+next-env.d.ts
