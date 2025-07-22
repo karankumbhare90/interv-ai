@@ -1,4 +1,6 @@
 import { Poppins } from "next/font/google";
+import { StackProvider, StackTheme } from "@stackframe/stack";
+import { stackServerApp } from "../stack";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -18,9 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.variable} antialiased`}
-      >
+      ><StackProvider app={stackServerApp}><StackTheme>
         {children}
-      </body>
+      </StackTheme></StackProvider></body>
     </html>
   );
 }

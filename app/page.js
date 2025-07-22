@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@stackframe/stack";
 
 
 export default function Home() {
-  return(
+  return (
     <div>
-      <h1>Hello Developer !! <br/> <Button> Let's Start</Button></h1>
+      <h1>Hello Developer !! </h1><br /> <Button> Let's Start</Button>
+      <UserButton />
     </div>
   )
 }
