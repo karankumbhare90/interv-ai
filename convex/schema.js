@@ -7,6 +7,6 @@ export default defineSchema({
         email: v.string(),
         profileImage: v.string(),
         credits: v.number(),
-        subscriptionId: v.string()
+        subscriptionId: v.optional(v.string())
     })
 })
