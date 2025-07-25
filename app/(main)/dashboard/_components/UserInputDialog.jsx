@@ -15,12 +15,15 @@ import { useMutation } from "convex/react";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
 import { api } from "@/convex/_generated/api";
+import { useRouter } from "next/navigation";
 
 export default function UserInputDialog({ children, coachingOption }) {
 
     const [selectedExpert, setSelectedExpert] = useState();
     const [topic, setTopic] = useState();
     const [loading, setLoading] = useState(false);
+    const [openDialog, setOpenDialog] = useState(false);
+    const router = useRouter();
 
     const createDiscussionRoom = useMutation(api.discussionRoom.CreateNewRoot)
 
@@ -32,10 +35,13 @@ export default function UserInputDialog({ children, coachingOption }) {
             expertName: selectedExpert
         })
         setLoading(false);
+        setOpenDialog(false);
+        router.push(`/discussion-room/${result}`)
+
     }
 
     return (
-        <Dialog>
+        <Dialog open={openDialog} onOpenChange={setOpenDialog}>
             <DialogTrigger>{children}</DialogTrigger>
             <DialogContent>
                 <DialogHeader>
